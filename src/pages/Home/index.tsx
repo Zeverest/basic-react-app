@@ -15,7 +15,7 @@ const Home: FunctionComponent<{}> = () => {
   const [numVolunteers, setNumVolunteers] = useState<number | null>(null);
 
   const getVolunteers = () => {
-    fetch("/api/v1/sites/" + SITE_ID + "/forms", {
+    fetch("https://api.netlify.com/api/v1/sites/" + SITE_ID + "/forms", {
       method: 'GET',
       headers: {
         Authorization: `Bearer ${AUTH_TOKEN}`,
